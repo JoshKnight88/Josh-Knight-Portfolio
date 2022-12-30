@@ -4,9 +4,7 @@ import { SegmentCard } from "../page-layout/card";
 export const Home: React.FC = () => {
   return (
     <>
-      <SegmentCard />
-      <h1>Home</h1>
-      
+      <SegmentCard title="Home" bodyText="Hi, I'm Josh. Welcome to my page."/>      
     </>
   );
 };

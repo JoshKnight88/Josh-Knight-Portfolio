@@ -9,6 +9,8 @@ import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
+import EastRoundedIcon from "@mui/icons-material/EastRounded";
+import { yellow } from "@mui/material/colors";
 
 type Anchor = "left";
 
@@ -35,7 +37,6 @@ export const SideNav = () => {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      
       <List>
         {["Home", "About", "Projects", "Contact"].map((text, index) => (
           <ListItem key={text} disablePadding>
@@ -46,14 +47,15 @@ export const SideNav = () => {
         ))}
       </List>
       <Divider />
-      
     </Box>
   );
   return (
     <div>
       {(["left"] as const).map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>Menu</Button>
+          <Button onClick={toggleDrawer(anchor, true)}>
+            <EastRoundedIcon sx={{ color: "purple" }} />
+          </Button>
           <Drawer
             anchor={anchor}
             open={isOpen[anchor]}
