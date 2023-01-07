@@ -1,26 +1,30 @@
+import React, { useState } from 'react';
+
 import emailjs from '@emailjs/browser';
+import { LoadingSpinner } from '../loading-spinner';
 import '../../assets/components/contact-form.css';
 
-// type Inputs = {
-//   name: string;
-//   email: string;
-//   subject: string;
-//   message: string;
-// };
+const service_key = process.env.SERVICE_KEY;
+const template_id = process.env.TEMPLATE_ID;
+const public_key = process.env.PUBLIC_KEY;
 
 export const ContactForm = () => {
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   watch,
-  //   formState: { errors },
-  // } = useForm<Inputs>();
+  const [formContent, setFormContent] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [isLoading, setIsLoading] = useState(false);
 
-  // : SubmitHandler<Inputs>
-  //goes in onSubmit line
-
+  const updateForm = (value: any) => {
+    return setFormContent((prev) => {
+      return { ...prev, ...value };
+    });
+  };
+  console.log(formContent);
   const onSubmit = (e: any) => {
     e.preventDefault();
+    setIsLoading(true);
     emailjs
       .sendForm(
         'service_2hqrf7r',
@@ -30,7 +34,9 @@ export const ContactForm = () => {
       )
       .then(
         (result) => {
+          setIsLoading(false);
           alert('Message sent!');
+          setFormContent({ name: '', email: '', message: '' });
         },
         (error) => {
           alert('Sorry, something went wrong!');
@@ -40,10 +46,29 @@ export const ContactForm = () => {
 
   return (
     <form className='form-body' id='contact-form' onSubmit={onSubmit}>
-      <input placeholder='Name' name='name' />
-      <input placeholder='Email' name='email' />
-      <textarea placeholder='Message' name='message' />
-      <input className='btn-submit' type='submit' />
+      <input
+        placeholder='Name'
+        name='name'
+        value={formContent.name}
+        onChange={(e) => updateForm({ name: e.target.value })}
+      />
+      <input
+        placeholder='Email'
+        name='email'
+        value={formContent.email}
+        onChange={(e) => updateForm({ email: e.target.value })}
+      />
+      <textarea
+        placeholder='Message'
+        name='message'
+        value={formContent.message}
+        onChange={(e) => updateForm({ message: e.target.value })}
+      />
+      {!isLoading ? (
+        <input className='btn-submit' type='submit' />
+      ) : (
+        <LoadingSpinner />
+      )}
     </form>
   );
 };
