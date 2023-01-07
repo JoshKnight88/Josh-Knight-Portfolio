@@ -1,35 +1,58 @@
-import React from "react";
+import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 
-import { SegmentCard } from "../../page-layout/card";
-import html from '../../../assets/images/language-icons/html.png'
-import js from "../../../assets/images/language-icons/js.png";
-import css from "../../../assets/images/language-icons/css.png";
-import react from "../../../assets/images/language-icons/react.png";
-import mongo from "../../../assets/images/language-icons/mongo.png";
-import node from "../../../assets/images/language-icons/node.png";
-import ts from "../../../assets/images/language-icons/ts.png";
-import '../../../assets/page-segments/title.css'
-import '../../../assets/page-segments/about.css'
+import { SegmentCard } from '../../page-layout/card';
+import html from '../../../assets/images/language-icons/html.png';
+import js from '../../../assets/images/language-icons/js.png';
+import css from '../../../assets/images/language-icons/css.png';
+import react from '../../../assets/images/language-icons/react.png';
+import mongo from '../../../assets/images/language-icons/mongo.png';
+import node from '../../../assets/images/language-icons/node.png';
+import ts from '../../../assets/images/language-icons/ts.png';
+import '../../../assets/page-segments/title.css';
+import '../../../assets/page-segments/about.css';
 
 export const About: React.FC = () => {
-  const languageIcons = [html, js, css, react, mongo, node, ts]
+  const languageIcons = [html, js, css, react, mongo, node, ts];
 
- 
   return (
-    <section className='about-body' id='About'>
-      <h1 className='title'>Josh Knight</h1>
-      <div>
-        {languageIcons.map((icon) => {
-          return <img src={icon} alt='language icons'></img>;
-        })}
+    <div className='about-body' id='About'>
+      <div className='col-left'>
+        <h1 className='title'>Josh <br/>Knight</h1>
+
+        <input className='photo' />
       </div>
-      <Link to='#Projects' smooth>
-        Projects
-      </Link>
-      <Link to='#Contact' smooth>
-        Contact
-      </Link>
-    </section>
+      <div className='col-mid'>
+        <p>
+          Lorem ipsum dolor sit amet. Eum suscipit provident qui quia dolorum
+          eum earum nesciunt sit consequatur quia et nisi magnam! Ut consequatur
+          perspiciatis et nesciunt placeat qui quia deleniti ut omnis voluptates
+          ut sint sunt. Et officia natus sit dolor maiores qui nihil molestiae
+          id numquam praesentium est animi dolores est quibusdam unde. Ut
+          dignissimos vitae ut officia corrupti et minima dolorem! Et labore
+          porro et ullam voluptatem quo laboriosam dolor. Ut maxime quia hic
+          perspiciatis explicabo qui velit quia? Vel voluptas optio At incidunt
+          quia id Quis iste. Et dicta exercitationem non ducimus officia rem
+          fugiat velit. Sit cupiditate optio est inventore quos sit totam
+          maiores et culpa amet est internos quasi et voluptatem voluptatem!
+        </p>
+        <Link to='#Projects' smooth>
+          Projects
+        </Link>
+        <Link to='#Contact' smooth>
+          Contact
+        </Link>
+      </div>
+      <div className='col-right'>
+        <div className='icon-container'>
+          {languageIcons.map((icon) => {
+            return <img src={icon} alt='language icons'></img>;
+          })}
+          <p>html | javascript | css | react | mongodb | node | typescript</p>
+          <hr />
+          <p>graphql | typeorm | etc</p>
+        </div>
+      </div>
+    </div>
   );
 };

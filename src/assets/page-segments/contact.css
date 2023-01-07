@@ -1,3 +1,16 @@
-.contact-body{
-    height: 1000px;
+.contact-body {
+  height: 600px;
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid black;
+}
+
+.title-and-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-segment-links {
+  text-decoration: none;
+  margin: 20px;
 }

@@ -2,10 +2,10 @@
     display: inline-block;
     width: auto;
     font-family: 'Righteous', cursive;
-    font-size: xx-large;
+    font-size: 100px;
     border-right: 3px solid #ff671e;
     border-bottom: 3px solid #ff671e;
     border-radius: 4px;
     padding-right: 3px;
-
+    margin: 10px;
 }

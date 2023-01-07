@@ -1,0 +1,43 @@
+.form-body {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin: 20px;
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+textarea {
+  width: 350px;
+  height: 150px;
+}
+
+.btn-submit {
+    max-width: 150px;
+    border-radius: 10px;
+    border-color: #2b580c;
+    background-color: #326e2c;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #326e2c),
+    color-stop(100%, #639a67)
+  );
+}
+
+.btn-submit:hover {
+    background-color: #2b580c;
+    background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #2b580c),
+    color-stop(100%, #639a67)
+  );
+}

@@ -1,3 +1,27 @@
-.about-body{
-    height: 1000px;
+.about-body {
+  height: 650px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 1px solid black
+
+}
+
+.icon-container {
+  border: 1px solid black;
+}
+.col-left {
+  display: flex;
+  flex-direction:column;
+  align-content: space-between;
+}
+
+.photo {
+  border-radius:50%;
+  height: 250px;
+  margin-top: 10px;;
+}
+
+.col-mid {
+  max-width: 250px;
 }
