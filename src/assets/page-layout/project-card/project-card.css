@@ -1,0 +1,14 @@
+.project-card {
+  height: 220px;
+  width: 250px;
+  border: 1px solid transparent;
+  overflow: hidden;
+  margin: 2px;
+  padding: 2px;
+}
+
+.expand-project-card {
+  height: auto;
+  width: 250px;
+  border: 1px solid transparent;
+}

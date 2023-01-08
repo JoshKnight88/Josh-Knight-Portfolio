@@ -1,16 +1,27 @@
 .projects-body {
   height: 650px;
+  width: auto;
   border: 1px solid black;
   display: flex;
   align-items: flex-start;
 }
 
-.projects-segment-links {
+.projects-segment-link {
   text-decoration: none;
   margin: 20px;
 }
 
-.title-and-links {
+.segment-links {
+  
+}
+
+.sideSpin-image {
+  width: 150px;
+  height: auto;
+}
+
+.project-cards {
   display: flex;
-  flex-direction: column;
+  justify-self: flex-end;
+
 }

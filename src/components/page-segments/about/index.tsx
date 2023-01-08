@@ -1,7 +1,6 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 
-import { SegmentCard } from '../../page-layout/card';
 import html from '../../../assets/images/language-icons/html.png';
 import js from '../../../assets/images/language-icons/js.png';
 import css from '../../../assets/images/language-icons/css.png';
@@ -18,7 +17,10 @@ export const About: React.FC = () => {
   return (
     <div className='about-body' id='About'>
       <div className='col-left'>
-        <h1 className='title'>Josh <br/>Knight</h1>
+        <h1 className='title'>
+          Josh <br />
+          Knight
+        </h1>
 
         <input className='photo' />
       </div>
