@@ -1,0 +1,37 @@
+.modal {
+  border: 1px solid black;
+  height: 150px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  position: absolute;
+  top: 220%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.close-icon {
+  margin-top: 2px;
+  margin-right: 5px;
+  align-self: flex-end;
+  color: grey;
+  text-decoration: none;
+}
+
+.modal-title {
+  align-self: center;
+  margin-top: 15px;
+}
+
+.subtitle {
+  align-self: center;
+  margin-top: 30px;
+}
+
+.close-icon:hover{
+    cursor: pointer;
+}

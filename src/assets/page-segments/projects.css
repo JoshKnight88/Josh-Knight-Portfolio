@@ -1,5 +1,16 @@
-.projects-body{
-    height: 650px;
-  border: 1px solid black
+.projects-body {
+  height: 650px;
+  border: 1px solid black;
+  display: flex;
+  align-items: flex-start;
+}
 
+.projects-segment-links {
+  text-decoration: none;
+  margin: 20px;
+}
+
+.title-and-links {
+  display: flex;
+  flex-direction: column;
 }

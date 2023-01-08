@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import emailjs from '@emailjs/browser';
 import { LoadingSpinner } from '../loading-spinner';
+import { Modal } from '../modal';
 import '../../assets/components/contact-form.css';
 
 const service_key = process.env.SERVICE_KEY;
@@ -15,13 +16,14 @@ export const ContactForm = () => {
     message: '',
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [isResultOpenModal, setIsResultOpenModal] = useState(false);
+  const [isErrorOpenModal, setIsErrorOpenModal] = useState(false);
 
   const updateForm = (value: any) => {
     return setFormContent((prev) => {
       return { ...prev, ...value };
     });
   };
-  console.log(formContent);
   const onSubmit = (e: any) => {
     e.preventDefault();
     setIsLoading(true);
@@ -34,41 +36,60 @@ export const ContactForm = () => {
       )
       .then(
         (result) => {
+          console.log(result);
           setIsLoading(false);
-          alert('Message sent!');
+          setIsResultOpenModal(true);
           setFormContent({ name: '', email: '', message: '' });
         },
         (error) => {
-          alert('Sorry, something went wrong!');
+          setIsErrorOpenModal(true);
+          return error;
         }
       );
   };
 
   return (
-    <form className='form-body' id='contact-form' onSubmit={onSubmit}>
-      <input
-        placeholder='Name'
-        name='name'
-        value={formContent.name}
-        onChange={(e) => updateForm({ name: e.target.value })}
-      />
-      <input
-        placeholder='Email'
-        name='email'
-        value={formContent.email}
-        onChange={(e) => updateForm({ email: e.target.value })}
-      />
-      <textarea
-        placeholder='Message'
-        name='message'
-        value={formContent.message}
-        onChange={(e) => updateForm({ message: e.target.value })}
-      />
-      {!isLoading ? (
-        <input className='btn-submit' type='submit' />
-      ) : (
-        <LoadingSpinner />
+    <>
+      <form className='form-body' id='contact-form' onSubmit={onSubmit}>
+        <input
+          placeholder='Name'
+          name='name'
+          value={formContent.name}
+          onChange={(e) => updateForm({ name: e.target.value })}
+        />
+        <input
+          placeholder='Email'
+          name='email'
+          value={formContent.email}
+          onChange={(e) => updateForm({ email: e.target.value })}
+        />
+        <textarea
+          placeholder='Message'
+          name='message'
+          value={formContent.message}
+          onChange={(e) => updateForm({ message: e.target.value })}
+        />
+        {!isLoading ? (
+          <input className='btn-submit' type='submit' />
+        ) : (
+          <LoadingSpinner />
+        )}
+      </form>
+      {isResultOpenModal && (
+        <Modal
+          title='Thanks for getting in touch!'
+          subtitle="I'll get back to you shortly."
+          onClick={() => setIsResultOpenModal(false)}
+        />
       )}
-    </form>
+      {isErrorOpenModal && (
+        <Modal
+          title="Sorry, something's gone wrong."
+          subtitle='error'
+          // {`${error}`}
+          onClick={() => setIsErrorOpenModal(false)}
+        />
+      )}
+    </>
   );
 };
