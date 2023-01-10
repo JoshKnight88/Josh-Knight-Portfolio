@@ -11,11 +11,13 @@
   margin: 20px;
 }
 
-.segment-links {
+.segment-title-and-links {
+  display: flex;
+  flex-direction: column;
   
 }
 
-.sideSpin-image {
+.sideSpin-image, .climb-comm-image {
   width: 150px;
   height: auto;
 }
@@ -23,5 +25,6 @@
 .project-cards {
   display: flex;
   justify-self: flex-end;
+  width: fit-content;
 
 }

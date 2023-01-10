@@ -4,7 +4,7 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 
-import '../../../assets/page-layout/project-card/project-card.css'
+import '../../../assets/page-layout/project-card/project-card.css';
 
 interface IProjectCardProps {
   image?: React.ReactElement;
@@ -22,26 +22,32 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
   projectLink,
   codeLink,
 }) => {
-  const [isExpandCard, setIsExpandCard]=useState(true)
+  const [isExpandCard, setIsExpandCard] = useState(true);
 
-const handleExpand = () => {
-  setIsExpandCard(!isExpandCard)
-}
+  const handleExpand = () => {
+    setIsExpandCard(!isExpandCard);
+  };
   return (
     <div className={isExpandCard ? 'project-card' : 'expand-project-card'}>
-      <IconButton>
-        {isExpandCard ? (
-          <ArrowDownwardIcon onClick={handleExpand} />
-        ) : (
-          <ArrowUpwardIcon onClick={handleExpand} />
-        )}
-      </IconButton>
-      {image} <br/>
-      {title} <br/>
-      {bodyText} <br/>
-      {projectLink} {codeLink}
+      <div className='image'>{image} </div>
+      <div className='title-arrow-container'>
+        <h4>{title}</h4>
+        <IconButton>
+          {isExpandCard ? (
+            <ArrowDownwardIcon
+              className='expand-arrow'
+              onClick={handleExpand}
+            />
+          ) : (
+            <ArrowUpwardIcon className='expand-arrow' onClick={handleExpand} />
+          )}
+        </IconButton>
+      </div>
+      <div>{bodyText}</div>
+      <div>
+        <b>{projectLink}</b>
+        <b>{codeLink}</b>
+      </div>
     </div>
-  ); 
-  
-  
+  );
 };

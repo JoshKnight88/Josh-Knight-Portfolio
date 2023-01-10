@@ -1,14 +1,40 @@
 .project-card {
-  height: 220px;
-  width: 250px;
-  border: 1px solid transparent;
+  height: 215px;
   overflow: hidden;
-  margin: 2px;
-  padding: 2px;
 }
 
 .expand-project-card {
-  height: auto;
-  width: 250px;
+  height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.project-card,
+.expand-project-card {
+  width: auto;
   border: 1px solid transparent;
+  margin: 10px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image {
+  display: inline-block;
+}
+
+.expand-arrow {
+  align-self: center;
+  font-size: smaller;
+}
+
+.expand-arrow:hover {
+  text-decoration: none;
+}
+
+.title-arrow-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
 }
