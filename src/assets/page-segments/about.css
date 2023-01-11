@@ -3,25 +3,36 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  border: 1px solid black
-
+  border: 1px solid black;
 }
 
 .icon-container {
-  border: 1px solid black;
+  height: 500px;
+  width: 500px;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 .col-left {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-content: space-between;
 }
 
 .photo {
-  border-radius:50%;
+  border-radius: 50%;
   height: 250px;
-  margin-top: 10px;;
+  margin-top: 10px;
 }
 
 .col-mid {
   max-width: 250px;
+}
+
+.language-icons {
+  margin: 2px;
+  padding: 5px;
 }

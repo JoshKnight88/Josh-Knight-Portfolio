@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
-import '../assets/components/modal.css';
+import '../../assets/components/utils/modal.css';
 import IconButton from '@mui/material/IconButton';
 
 interface IModalProps {

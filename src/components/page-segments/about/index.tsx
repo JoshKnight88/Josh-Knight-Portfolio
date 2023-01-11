@@ -1,6 +1,8 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 
+import { FlipCard } from '../../utils/flip-card';
+
 import html from '../../../assets/images/language-icons/html.png';
 import js from '../../../assets/images/language-icons/js.png';
 import css from '../../../assets/images/language-icons/css.png';
@@ -12,7 +14,43 @@ import '../../../assets/page-segments/title.css';
 import '../../../assets/page-segments/about.css';
 
 export const About: React.FC = () => {
-  const languageIcons = [html, js, css, react, mongo, node, ts];
+  const cards = [
+    {
+      front: html,
+      back: 'HTML',
+      exp: '1 year',
+    },
+    {
+      front: js,
+      back: 'Javascript',
+      exp: '1 year',
+    },
+    {
+      front: css,
+      back: 'CSS',
+      exp: '1 year',
+    },
+    {
+      front: react,
+      back: 'React',
+      exp: '9 months',
+    },
+    {
+      front: mongo,
+      back: 'MongoDB',
+      exp: '1 year',
+    },
+    {
+      front: node,
+      back: 'Node.js',
+      exp: '1 year',
+    },
+    {
+      front: ts,
+      back: 'Typescript',
+      exp: '9 months',
+    },
+  ];
 
   return (
     <div className='about-body' id='About'>
@@ -47,12 +85,9 @@ export const About: React.FC = () => {
       </div>
       <div className='col-right'>
         <div className='icon-container'>
-          {languageIcons.map((icon) => {
-            return <img src={icon} alt='language icons'></img>;
-          })}
-          <p>html | javascript | css | react | mongodb | node | typescript</p>
-          <hr />
-          <p>graphql | typeorm | etc</p>
+          {cards.map((card) => (
+            <FlipCard front={card.front} back={card.back} exp={card.exp} />
+          ))}
         </div>
       </div>
     </div>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import emailjs from '@emailjs/browser';
-import { LoadingSpinner } from '../loading-spinner';
-import { Modal } from '../modal';
+import { LoadingSpinner } from '../utils/loading-spinner';
+import { Modal } from '../utils/modal';
 import '../../assets/components/contact-form.css';
 
 const service_key = process.env.SERVICE_KEY;
