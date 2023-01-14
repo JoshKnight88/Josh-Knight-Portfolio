@@ -1,7 +1,6 @@
 .projects-body {
-  height: 650px;
+  height: 100vh;
   width: auto;
-  border: 1px solid black;
   display: flex;
   align-items: flex-start;
 }
@@ -26,5 +25,6 @@
   display: flex;
   justify-self: flex-end;
   width: fit-content;
+  font-family: 'Raleway', sans-serif;
 
 }

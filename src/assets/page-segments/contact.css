@@ -1,8 +1,7 @@
 .contact-body {
-  height: 650px;
+  height: 100vh;;
   display: flex;
   align-items: flex-start;
-  border: 1px solid black;
 }
 
 .title-and-links {

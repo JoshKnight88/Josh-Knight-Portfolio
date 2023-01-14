@@ -68,20 +68,22 @@ export const About: React.FC = () => {
           eum earum nesciunt sit consequatur quia et nisi magnam! Ut consequatur
           perspiciatis et nesciunt placeat qui quia deleniti ut omnis voluptates
           ut sint sunt. Et officia natus sit dolor maiores qui nihil molestiae
-          id numquam praesentium est animi dolores est quibusdam unde. Ut
-          dignissimos vitae ut officia corrupti et minima dolorem! Et labore
-          porro et ullam voluptatem quo laboriosam dolor. Ut maxime quia hic
-          perspiciatis explicabo qui velit quia? Vel voluptas optio At incidunt
-          quia id Quis iste. Et dicta exercitationem non ducimus officia rem
-          fugiat velit. Sit cupiditate optio est inventore quos sit totam
-          maiores et culpa amet est internos quasi et voluptatem voluptatem!
+          id numquam praesentium est
+          <Link to='#Projects' className='about-segment-links' smooth>
+            Projects
+          </Link>
+          animi dolores est quibusdam unde. Ut dignissimos vitae ut officia
+          corrupti et minima dolorem! Et labore porro et ullam voluptatem quo
+          laboriosam dolor. Ut maxime quia hic perspiciatis explicabo qui velit
+          quia? Vel voluptas optio At incidunt quia id Quis iste. Et dicta
+          exercitationem non ducimus officia rem fugiat velit. Sit cupiditate
+          optio est inventore quos sit totam maiores et culpa amet est internos
+          quasi et voluptatem
+          <Link to='#Contact' className='about-segment-links' smooth>
+            Contact
+          </Link>
+          voluptatem!
         </p>
-        <Link to='#Projects' smooth>
-          Projects
-        </Link>
-        <Link to='#Contact' smooth>
-          Contact
-        </Link>
       </div>
       <div className='col-right'>
         <div className='icon-container'>
