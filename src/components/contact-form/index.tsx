@@ -72,10 +72,10 @@ export const ContactForm = () => {
     console.log(formContent)
     emailjs
       .sendForm(
-        'service_2hqrf7r',
-        'template_gbble6j',
+        `${service_key}`,
+        `${template_id}`,
         '#contact-form',
-        'QM_VuSiDgeF9nPkqo'
+        `${public_key}`
       )
       .then(
         (result) => {

@@ -1,6 +1,4 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { HashLink as Link } from 'react-router-hash-link';
+import { BrowserRouter } from 'react-router-dom';
 
 import { About } from './components/page-segments/about';
 import { Contact } from './components/page-segments/contact';

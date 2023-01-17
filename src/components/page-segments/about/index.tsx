@@ -54,15 +54,14 @@ export const About: React.FC = () => {
 
   return (
     <div className='about-body' id='About'>
-      <div className='col-left'>
+      <div className='title-container'>
         <h1 className='title'>
           Josh <br />
           Knight
         </h1>
-
-        <input className='photo' />
       </div>
-      <div className='col-mid'>
+
+      <div className='about-text'>
         <p>
           Lorem ipsum dolor sit amet. Eum suscipit provident qui quia dolorum
           eum earum nesciunt sit consequatur quia et nisi magnam! Ut consequatur
@@ -85,11 +84,16 @@ export const About: React.FC = () => {
           voluptatem!
         </p>
       </div>
-      <div className='col-right'>
-        <div className='icon-container'>
-          {cards.map((card) => (
-            <FlipCard front={card.front} back={card.back} exp={card.exp} />
-          ))}
+      <div icons-and-photo>
+        <div className='icons'>
+          <div className='icon-container'>
+            {cards.map((card) => (
+              <FlipCard front={card.front} back={card.back} exp={card.exp} />
+            ))}
+          </div>
+        </div>
+        <div className='image-of-me'>
+          <input className='photo' />
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-// import * as dotenv from 'dotenv'
+import  App  from './App';
+import * as dotenv from 'dotenv'
 
-// dotenv.config({ path: './config.env' });
+dotenv.config({ path: './config.env' });
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,5 +13,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-

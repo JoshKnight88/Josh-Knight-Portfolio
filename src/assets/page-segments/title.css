@@ -11,3 +11,13 @@
   padding-right: 3px;
   margin: 10px;
 }
+
+@media(max-width: 412px) {
+  .title{
+  font-size: 50px;
+  border-right: transparent;
+  border-bottom-right-radius: 0px;
+
+
+  }
+}

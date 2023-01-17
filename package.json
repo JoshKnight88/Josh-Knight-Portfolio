@@ -21,6 +21,7 @@
     "@types/react-transition-group": "^4.4.5",
     "dotenv": "^16.0.3",
     "email-js": "^2.0.2",
+    "firebase-tools": "^11.20.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.6.1",
