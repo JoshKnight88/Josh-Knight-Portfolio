@@ -1,15 +1,20 @@
-.contact-body {
-  height: 100vh;;
-  display: flex;
-  align-items: flex-start;
-}
+@media only screen and (max-width: 30em) {
+  .contact-body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.title-and-links {
-  display: flex;
-  flex-direction: column;
-}
+  .title-and-links {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7em;
 
-.contact-segment-links {
-  text-decoration: none;
-  margin: 20px;
+  }
+
+  .contact-segment-links {
+    text-decoration: none;
+    margin: 20px;
+  }
 }

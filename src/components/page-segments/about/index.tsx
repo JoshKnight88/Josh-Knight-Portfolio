@@ -84,7 +84,7 @@ export const About: React.FC = () => {
           voluptatem!
         </p>
       </div>
-      <div icons-and-photo>
+      <div className="icons-and-image">
         <div className='icons'>
           <div className='icon-container'>
             {cards.map((card) => (
@@ -92,8 +92,8 @@ export const About: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className='image-of-me'>
-          <input className='photo' />
+        <div className='image-container'>
+          <input className='image' />
         </div>
       </div>
     </div>

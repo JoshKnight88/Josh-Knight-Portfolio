@@ -1,30 +1,24 @@
-.projects-body {
-  height: 100vh;
-  width: auto;
-  display: flex;
-  align-items: flex-start;
-}
-
-.projects-segment-link {
-  text-decoration: none;
-  margin: 20px;
-}
-
-.segment-title-and-links {
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.sideSpin-image, .climb-comm-image {
-  width: 150px;
-  height: auto;
-}
-
-.project-cards {
-  display: flex;
-  justify-self: flex-end;
-  width: fit-content;
-  font-family: 'Raleway', sans-serif;
-
+@media only screen and (max-width: 30em) {
+  .projects-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 100vh;
+  }
+  .title-container {
+    padding-left: 2em;
+  }
+  .project-cards {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 5em;
+  }
+  .sideSpin-image,
+  .climb-comm-image {
+    width: 5em;
+    height: auto;
+  }
 }
