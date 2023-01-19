@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 
 import { FlipCard } from '../../utils/flip-card';
 
@@ -12,6 +12,7 @@ import node from '../../../assets/images/language-icons/node.png';
 import ts from '../../../assets/images/language-icons/ts.png';
 import '../../../assets/page-segments/title.css';
 import '../../../assets/page-segments/about.css';
+import { SocialsLinks } from '../../page-layout/socials-links';
 
 export const About: React.FC = () => {
   const cards = [
@@ -68,30 +69,30 @@ export const About: React.FC = () => {
       <div className='text-icons'>
         <div className='about-text'>
           <p>
-            Hi! I'm Josh. Having decided to undertake a career change, I started learning
-            frontend web development a year ago. I completed an online bootcamp
-            and since then have been expanding my knowledge with the help of a
-            mentor and by lots of self-driven research and practice. I’ve
-            enjoyed developing my skills in React and the work I’ve done using
-            MongoDB. I’m looking forward to learning more backend processes and
-            languages in the future. It’s been an extremely fulfilling
-            experience and I’m excited to start my career in coding. I’ve spent
-            many years writing, proof-reading and editing my work, to a
-            publishable level, and the work of others, to degree, Masters and
+            Hi! I'm Josh. Having decided to undertake a career change, I started
+            learning frontend web development a year ago. I completed an online
+            bootcamp and since then have been expanding my knowledge with the
+            help of a mentor and by lots of self-driven research and practice.
+            I’ve enjoyed developing my skills in React and the work I’ve done
+            using MongoDB. I’m looking forward to learning more backend
+            processes and languages in the future. It’s been an extremely
+            fulfilling experience and I’m excited to start my career in coding.
+            I’ve spent many years writing, proof-reading and editing my work, to
+            a publishable level, and the work of others, to degree, Masters and
             PhD level. This has given me a keen eye for syntactical errors and
             inconsistencies. Over the last year, I’ve dedicated the vast
             majority of my evenings, weekends and annual leave to learning how
-            to code. Here are the
-            <Link to='#Projects' className='about-segment-links' smooth>
+            to code. Here are the&nbsp;
+            <HashLink to='#Projects' className='about-segment-links' smooth>
               Projects
-            </Link>
-            I've been working on. I’m a keen, respectful learner, ready to take
-            my skills to the next level and learn more about best practices and
-            working in a professional environment. You can
-            <Link to='#Contact' className='about-segment-links' smooth>
+            </HashLink>
+            &nbsp; I've been working on. I’m a keen, respectful learner, ready
+            to take my skills to the next level and learn more about best
+            practices and working in a professional environment. You can &nbsp;
+            <HashLink to='#Contact' className='about-segment-links' smooth>
               Contact me
-            </Link>
-            here.
+            </HashLink>
+            &nbsp; here.
           </p>
         </div>
         <div className='icons-and-image'>

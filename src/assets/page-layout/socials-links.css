@@ -1,0 +1,45 @@
+@media only screen and (min-width: 100px) and (max-width: 600px) {
+  .socials-links-container {
+    background-color: transparent;
+    position: fixed;
+    margin-left: 78%;
+    top: 1;
+    width: 88%;
+  }
+
+  .socials-links-buttons {
+    background-color: #f5f7fa;
+    border: none;
+    cursor: pointer;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .socials-links-container {
+    background-color: transparent;
+    position: fixed;
+    margin-left: 90%;
+    bottom: 0px;
+    width: 88%;
+  }
+
+  .socials-links-buttons {
+    background-color: #f5f7fa;
+    border: none;
+    cursor: pointer;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .socials-links-container {
+    background-color: transparent;
+    position: fixed;
+    margin-left: 90%;
+    bottom: 0px;
+    width: 90%;
+  }
+
+  .socials-links-buttons {
+    background-color: #f5f7fa;
+    border: none;
+    cursor: pointer;
+  }
+}

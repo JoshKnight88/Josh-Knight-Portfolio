@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 import { ProjectCard } from '../../page-layout/project-card';
 
 import '../../../assets/page-segments/title.css';
@@ -7,6 +7,7 @@ import '../../../assets/page-segments/projects.css';
 import '../../../assets/page-layout/segment-links.css';
 import sideSpin from '../../../assets/images/project-cards/project-img-sideSpin.png';
 import climbComm from '../../../assets/images/project-cards/project-img-climb-comm.png';
+import { SocialsLinks } from '../../page-layout/socials-links';
 
 export const Projects: React.FC = () => {
   return (
@@ -14,12 +15,12 @@ export const Projects: React.FC = () => {
       <div className='segment-title-and-links'>
         <h1 className='title'>Projects</h1>
         <div>
-          <Link to='#About' smooth className='segment-links'>
+          <HashLink to='#About' smooth className='segment-links'>
             About
-          </Link>
-          <Link to='#Contact' smooth className='segment-links'>
+          </HashLink>
+          <HashLink to='#Contact' smooth className='segment-links'>
             Contact
-          </Link>
+          </HashLink>
         </div>
         <div className='projects-text'>
           <p>

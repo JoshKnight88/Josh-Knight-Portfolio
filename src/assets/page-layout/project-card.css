@@ -53,3 +53,9 @@
     overflow: scroll;
   }
 }
+@media only screen and (min-width: 900px) {
+  .card-open {
+    height: 200px;
+    max-width: 500px;
+  }
+}

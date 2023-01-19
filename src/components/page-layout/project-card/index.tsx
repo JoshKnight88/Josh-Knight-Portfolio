@@ -4,7 +4,7 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 
-import '../../../assets/page-layout/project-card/project-card.css';
+import '../../../assets/page-layout/project-card.css';
 
 interface IProjectCardProps {
   image?: React.ReactElement;
