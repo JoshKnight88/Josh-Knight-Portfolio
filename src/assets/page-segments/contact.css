@@ -1,20 +1,47 @@
-@media only screen and (max-width: 30em) {
+@media only screen and (min-width: 100px) and (max-width: 600px) {
   .contact-body {
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    background-color: #f5f7fa;
   }
 
   .title-and-links {
     display: flex;
     flex-direction: column;
     margin-bottom: 7em;
-
   }
+  .contact-text {
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+  }
+}
 
-  .contact-segment-links {
-    text-decoration: none;
-    margin: 20px;
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .contact-body {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #f5f7fa;
+  }
+  .contact-text {
+    font-family: 'Raleway', sans-serif;
+    margin: 20px 0px 20px 10px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .contact-body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #f5f7fa;
+  }
+  .contact-text {
+    font-family: 'Raleway', sans-serif;
+    margin: 20px 0px 20px 10px;
   }
 }

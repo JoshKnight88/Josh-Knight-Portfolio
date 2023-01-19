@@ -1,6 +1,6 @@
 import { IconButton } from '@mui/material';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 
@@ -29,20 +29,20 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
   };
   return (
     <div>
-      <div>
+      <div className='project-card'>
         {image}
         <h4>{title}</h4>
         <IconButton>
           {!isOpen ? (
-            <ArrowDownwardIcon onClick={handleOpen} />
+            <ExpandMoreIcon onClick={handleOpen} />
           ) : (
-            <ArrowUpwardIcon onClick={handleOpen} />
+            <ExpandLessIcon onClick={handleOpen} />
           )}
         </IconButton>
       </div>
       <div>
         {isOpen && (
-          <div>
+          <div className='card-open'>
             {bodyText}
             {projectLink}
             {codeLink}

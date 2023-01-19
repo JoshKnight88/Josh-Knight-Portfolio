@@ -39,11 +39,21 @@
   height: 50px;
   width: 50px;
   border-radius: 4px;
-  margin-left: 4px;
-  margin-right: 4px;
 }
 
 .card-text {
   font-size: x-small;
   padding: 2px;
+}
+
+@media only screen and (min-width: 901px) {
+  .flip-card-outer {
+    width: 70px;
+    height: 60px;
+  }
+  .flip-card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

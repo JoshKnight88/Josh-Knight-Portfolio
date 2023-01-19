@@ -24,6 +24,13 @@
   width: auto;
   display: inline-block;
 } */
+.project-card {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
 
 .expand-arrow {
   align-self: center;
@@ -38,4 +45,11 @@
   display: flex;
   justify-content: flex-end;
   padding-bottom: 10px;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 600px) {
+  .card-open {
+    height: 200px;
+    overflow: scroll;
+  }
 }

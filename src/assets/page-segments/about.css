@@ -1,23 +1,26 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 100px) and (max-width: 600px) {
   .about-body {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-between;
-    height: 100vh;
+    height: auto;
+    background-color: #f5f7fa;
   }
   .title-container {
     padding-left: 2em;
   }
+  .title-image {
+    display: flex;
+  }
   .about-text {
     font-family: 'Raleway', sans-serif;
-    padding: 2em;
   }
   .icon-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 3em;
     margin-top: 3em;
+    width: 200px;
   }
   .image-container {
     display: flex;
@@ -36,11 +39,17 @@
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
   .about-body {
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
+    background-color: #f5f7fa;
+    height: auto;
+    /* height: auto;
+    display: flex; */
+    /* flex-wrap: wrap; */
     justify-content: center;
   }
+  .title-image {
+    display: flex;
+  }
+
   .icon-container {
     display: flex;
     justify-content: center;
@@ -50,18 +59,65 @@
   .image-of-me {
     width: 8em;
     height: 8em;
-    border: 1em solid #ff671e;
   }
   .image-container {
     display: flex;
     justify-content: center;
   }
   .about-text {
+    font-family: 'Raleway', sans-serif;
     width: 25em;
   }
   .about-segment-links {
     color: black;
     text-decoration: none;
     font-family: 'Righteous', cursive;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .about-body {
+    background-color: #f5f7fa;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .title-image {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3em;
+    margin-top: 3em;
+  }
+  .image-of-me {
+    width: 10em;
+    height: 10em;
+  }
+  .about-text {
+    font-family: 'Raleway', sans-serif;
+    width: 25em;
+    height: 25em;
+  }
+  .about-segment-links {
+    color: black;
+    text-decoration: none;
+    font-family: 'Righteous', cursive;
+  }
+  .text-icons {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 190px;
+  }
+  .icon-container {
+    margin-left: 5px;
+  }
+  .about-text {
+    margin-right: 5px;
+    margin-left: 10px;
   }
 }

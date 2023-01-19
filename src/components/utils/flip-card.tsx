@@ -11,7 +11,7 @@ export const FlipCard: React.FC<IFlipCardProps> = ({ front, back, exp }) => {
       <div className='flip-card-outer'>
         <div className='flip-card-inner'>
           <div className='flip-card-front'>
-            <img src={front} alt='Paris' className='card-images'></img>
+            <img src={front} alt='language icon' className='card-images'></img>
           </div>
           <div className='flip-card-back'>
             <p className='card-text'>{back}<br/>{exp}</p>

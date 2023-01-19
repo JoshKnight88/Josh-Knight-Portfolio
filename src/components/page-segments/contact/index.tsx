@@ -20,6 +20,9 @@ export const Contact: React.FC = () => {
           </Link>
         </div>
       </div>
+      <div className='contact-text'>
+        <p>If you'd like to talk to me about anything, feel free to send me a message!</p>
+      </div>
       <div className='form'>
         <ContactForm />
       </div>

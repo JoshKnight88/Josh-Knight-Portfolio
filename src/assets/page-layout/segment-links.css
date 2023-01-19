@@ -1,18 +1,17 @@
 .segment-links {
   font-family: 'Righteous', cursive;
   text-decoration: none;
-  background-color: #ff671e;
-  color: white;
+  /* background-color: #ff671e; */
+  color: #ff671e;
   margin: 15px;
   padding: 10px;
-  border: 2px solid black;
+  /* border: 2px solid black;
   border-top: transparent;
   border-radius: 10px;
   border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
+  border-top-right-radius: 0px; */
 }
 
 .segment-links:active {
-  background-color: #fe8046;
-
+  color: #ca4102;
 }

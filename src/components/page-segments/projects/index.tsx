@@ -21,7 +21,7 @@ export const Projects: React.FC = () => {
             Contact
           </Link>
         </div>
-        <div>
+        <div className='projects-text'>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
             quam. Dolorum doloremque quae veniam aliquid saepe odio quas vitae
@@ -33,7 +33,6 @@ export const Projects: React.FC = () => {
       <div className='project-cards'>
         <ProjectCard
           image={
-            
             <img
               src={climbComm}
               alt='climb-comm image'

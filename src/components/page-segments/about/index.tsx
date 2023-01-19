@@ -54,46 +54,54 @@ export const About: React.FC = () => {
 
   return (
     <div className='about-body' id='About'>
-      <div className='title-container'>
-        <h1 className='title'>
-          Josh <br />
-          Knight
-        </h1>
-      </div>
-
-      <div className='about-text'>
-        <p>
-          Lorem ipsum dolor sit amet. Eum suscipit provident qui quia dolorum
-          eum earum nesciunt sit consequatur quia et nisi magnam! Ut consequatur
-          perspiciatis et nesciunt placeat qui quia deleniti ut omnis voluptates
-          ut sint sunt. Et officia natus sit dolor maiores qui nihil molestiae
-          id numquam praesentium est
-          <Link to='#Projects' className='about-segment-links' smooth>
-            Projects
-          </Link>
-          animi dolores est quibusdam unde. Ut dignissimos vitae ut officia
-          corrupti et minima dolorem! Et labore porro et ullam voluptatem quo
-          laboriosam dolor. Ut maxime quia hic perspiciatis explicabo qui velit
-          quia? Vel voluptas optio At incidunt quia id Quis iste. Et dicta
-          exercitationem non ducimus officia rem fugiat velit. Sit cupiditate
-          optio est inventore quos sit totam maiores et culpa amet est internos
-          quasi et voluptatem
-          <Link to='#Contact' className='about-segment-links' smooth>
-            Contact
-          </Link>
-          voluptatem!
-        </p>
-      </div>
-      <div className="icons-and-image">
-        <div className='icons'>
-          <div className='icon-container'>
-            {cards.map((card) => (
-              <FlipCard front={card.front} back={card.back} exp={card.exp} />
-            ))}
-          </div>
+      <div className='title-image'>
+        <div className='title-container'>
+          <h1 className='title'>
+            Josh <br />
+            Knight
+          </h1>
         </div>
         <div className='image-container'>
           <input className='image-of-me' />
+        </div>
+      </div>
+      <div className='text-icons'>
+        <div className='about-text'>
+          <p>
+            Hi! I'm Josh. Having decided to undertake a career change, I started learning
+            frontend web development a year ago. I completed an online bootcamp
+            and since then have been expanding my knowledge with the help of a
+            mentor and by lots of self-driven research and practice. I’ve
+            enjoyed developing my skills in React and the work I’ve done using
+            MongoDB. I’m looking forward to learning more backend processes and
+            languages in the future. It’s been an extremely fulfilling
+            experience and I’m excited to start my career in coding. I’ve spent
+            many years writing, proof-reading and editing my work, to a
+            publishable level, and the work of others, to degree, Masters and
+            PhD level. This has given me a keen eye for syntactical errors and
+            inconsistencies. Over the last year, I’ve dedicated the vast
+            majority of my evenings, weekends and annual leave to learning how
+            to code. Here are the
+            <Link to='#Projects' className='about-segment-links' smooth>
+              Projects
+            </Link>
+            I've been working on. I’m a keen, respectful learner, ready to take
+            my skills to the next level and learn more about best practices and
+            working in a professional environment. You can
+            <Link to='#Contact' className='about-segment-links' smooth>
+              Contact me
+            </Link>
+            here.
+          </p>
+        </div>
+        <div className='icons-and-image'>
+          <div className='icons'>
+            <div className='icon-container'>
+              {cards.map((card) => (
+                <FlipCard front={card.front} back={card.back} exp={card.exp} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
