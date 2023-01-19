@@ -22,31 +22,32 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
   projectLink,
   codeLink,
 }) => {
-  const [isExpandCard, setIsExpandCard] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleExpand = () => {
-    setIsExpandCard(!isExpandCard);
+  const handleOpen = () => {
+    setIsOpen(!isOpen);
   };
   return (
-    <div className={isExpandCard ? 'project-card' : 'expand-project-card'}>
-      <div className='image'>{image} </div>
-      <div className='title-arrow-container'>
+    <div>
+      <div>
+        {image}
         <h4>{title}</h4>
         <IconButton>
-          {isExpandCard ? (
-            <ArrowDownwardIcon
-              className='expand-arrow'
-              onClick={handleExpand}
-            />
+          {!isOpen ? (
+            <ArrowDownwardIcon onClick={handleOpen} />
           ) : (
-            <ArrowUpwardIcon className='expand-arrow' onClick={handleExpand} />
+            <ArrowUpwardIcon onClick={handleOpen} />
           )}
         </IconButton>
       </div>
-      <div>{bodyText}</div>
       <div>
-        <b>{projectLink}</b>
-        <b>{codeLink}</b>
+        {isOpen && (
+          <div>
+            {bodyText}
+            {projectLink}
+            {codeLink}
+          </div>
+        )}
       </div>
     </div>
   );

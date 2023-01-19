@@ -1,3 +1,9 @@
+.sideSpin-image,
+.climb-comm-image {
+  width: 5em;
+  height: auto;
+}
+
 @media only screen and (max-width: 30em) {
   .projects-body {
     display: flex;
@@ -22,3 +28,21 @@
     height: auto;
   }
 }
+
+/* @media only screen and (max-width: 48em) {
+  .projects-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 100vh;
+  }
+  .project-cards {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 5em;
+  }
+ 
+} */

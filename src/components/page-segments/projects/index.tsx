@@ -4,7 +4,7 @@ import { ProjectCard } from '../../page-layout/project-card';
 
 import '../../../assets/page-segments/title.css';
 import '../../../assets/page-segments/projects.css';
-import '../../../assets/page-layout/segment-links.css'
+import '../../../assets/page-layout/segment-links.css';
 import sideSpin from '../../../assets/images/project-cards/project-img-sideSpin.png';
 import climbComm from '../../../assets/images/project-cards/project-img-climb-comm.png';
 
@@ -21,10 +21,19 @@ export const Projects: React.FC = () => {
             Contact
           </Link>
         </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+            quam. Dolorum doloremque quae veniam aliquid saepe odio quas vitae
+            autem rerum. Perspiciatis facere quisquam numquam, optio distinctio
+            quae accusantium exercitationem.
+          </p>
+        </div>
       </div>
       <div className='project-cards'>
         <ProjectCard
           image={
+            
             <img
               src={climbComm}
               alt='climb-comm image'
@@ -34,7 +43,7 @@ export const Projects: React.FC = () => {
           title='Climbing Community'
           bodyText="The problem: I'm a keen climber, 
             but sometimes none of my friends are available to climb when I am. 
-            This website is an ongoing project for a friend and I. The Buudy Search feature 
+            This website is an ongoing project for a friend and I. The Buddy Search feature 
             allows users to post which gyms they climb at, what type of climbing they want to do, 
             and their availability throughput the week. We are also working on a feature that allows 
             climbers to track their progress with different routes at their gyms. We manage the work 

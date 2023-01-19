@@ -93,7 +93,7 @@ export const About: React.FC = () => {
           </div>
         </div>
         <div className='image-container'>
-          <input className='image' />
+          <input className='image-of-me' />
         </div>
       </div>
     </div>

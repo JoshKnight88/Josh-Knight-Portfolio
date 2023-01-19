@@ -1,4 +1,4 @@
-@media only screen and (max-width: 30em) {
+@media only screen and (max-width: 600px) {
   .about-body {
     display: flex;
     flex-direction: column;
@@ -23,9 +23,41 @@
     display: flex;
     justify-content: center;
   }
-  .image {
+  .image-of-me {
     width: 5em;
     height: 5em;
+  }
+  .about-segment-links {
+    color: black;
+    text-decoration: none;
+    font-family: 'Righteous', cursive;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .about-body {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3em;
+    margin-top: 3em;
+  }
+  .image-of-me {
+    width: 8em;
+    height: 8em;
+    border: 1em solid #ff671e;
+  }
+  .image-container {
+    display: flex;
+    justify-content: center;
+  }
+  .about-text {
+    width: 25em;
   }
   .about-segment-links {
     color: black;
