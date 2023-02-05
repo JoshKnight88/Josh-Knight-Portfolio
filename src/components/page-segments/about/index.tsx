@@ -12,7 +12,6 @@ import node from '../../../assets/images/language-icons/node.png';
 import ts from '../../../assets/images/language-icons/ts.png';
 import '../../../assets/page-segments/title.css';
 import '../../../assets/page-segments/about.css';
-import { SocialsLinks } from '../../page-layout/socials-links';
 
 export const About: React.FC = () => {
   const cards = [
@@ -62,11 +61,6 @@ export const About: React.FC = () => {
             Knight
           </h1>
         </div>
-        <div className='image-container'>
-          <input className='image-of-me' />
-        </div>
-      </div>
-      <div className='text-icons'>
         <div className='about-text'>
           <p>
             Hi! I'm Josh. Having decided to undertake a career change, I started
@@ -95,6 +89,11 @@ export const About: React.FC = () => {
             &nbsp; here.
           </p>
         </div>
+        <div className='image-container'>
+          <input className='image-of-me' />
+        </div>
+      </div>
+      <div className='text-icons'>
         <div className='icons-and-image'>
           <div className='icons'>
             <div className='icon-container'>

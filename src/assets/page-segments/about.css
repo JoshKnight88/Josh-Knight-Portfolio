@@ -1,3 +1,16 @@
+.about-segment-links {
+  color: black;
+  text-decoration: none;
+  font-family: 'Righteous', cursive;
+}
+
+.title-image {
+  display: flex;
+}
+.about-text {
+  font-family: 'Raleway', sans-serif;
+}
+
 @media only screen and (min-width: 100px) and (max-width: 600px) {
   .about-body {
     display: flex;
@@ -11,9 +24,7 @@
   .title-image {
     display: flex;
   }
-  .about-text {
-    font-family: 'Raleway', sans-serif;
-  }
+
   .icon-container {
     display: flex;
     justify-content: center;
@@ -30,11 +41,6 @@
     width: 5em;
     height: 5em;
   }
-  .about-segment-links {
-    color: black;
-    text-decoration: none;
-    font-family: 'Righteous', cursive;
-  }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
@@ -45,9 +51,6 @@
     display: flex; */
     /* flex-wrap: wrap; */
     justify-content: center;
-  }
-  .title-image {
-    display: flex;
   }
 
   .icon-container {
@@ -68,11 +71,6 @@
     font-family: 'Raleway', sans-serif;
     width: 25em;
   }
-  .about-segment-links {
-    color: black;
-    text-decoration: none;
-    font-family: 'Righteous', cursive;
-  }
 }
 
 @media only screen and (min-width: 901px) {
@@ -86,6 +84,7 @@
   .title-image {
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
 
   .icon-container {
@@ -103,11 +102,7 @@
     width: 25em;
     height: 25em;
   }
-  .about-segment-links {
-    color: black;
-    text-decoration: none;
-    font-family: 'Righteous', cursive;
-  }
+
   .text-icons {
     display: flex;
     justify-content: space-between;

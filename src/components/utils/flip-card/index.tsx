@@ -1,4 +1,4 @@
-import '../../assets/components/utils/flip-card.css'
+import '../../../assets/components/utils/flip-card.css'
 
 interface IFlipCardProps {
   front: string;

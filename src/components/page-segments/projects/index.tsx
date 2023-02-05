@@ -1,13 +1,13 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 import { ProjectCard } from '../../page-layout/project-card';
-
 import '../../../assets/page-segments/title.css';
 import '../../../assets/page-segments/projects.css';
 import '../../../assets/page-layout/segment-links.css';
 import sideSpin from '../../../assets/images/project-cards/project-img-sideSpin.png';
 import climbComm from '../../../assets/images/project-cards/project-img-climb-comm.png';
-import { SocialsLinks } from '../../page-layout/socials-links';
+import { ClimbingCommunityLink } from '../../page-layout/project-links/climbing-community-link';
+import { SideSpinLink } from '../../page-layout/project-links/sideSpin-link';
 
 export const Projects: React.FC = () => {
   return (
@@ -24,10 +24,8 @@ export const Projects: React.FC = () => {
         </div>
         <div className='projects-text'>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
-            quam. Dolorum doloremque quae veniam aliquid saepe odio quas vitae
-            autem rerum. Perspiciatis facere quisquam numquam, optio distinctio
-            quae accusantium exercitationem.
+            Below are the projects I'm involved with. Feel free to to check them
+            out!
           </p>
         </div>
       </div>
@@ -48,8 +46,7 @@ export const Projects: React.FC = () => {
             and their availability throughput the week. We are also working on a feature that allows 
             climbers to track their progress with different routes at their gyms. We manage the work 
             flow with tickets on a kanban board and pull requests. Languages and frameworks: Typescript, HTML, MUI, GrapgQL, TypeORM"
-          projectLink='link to external project'
-          codeLink='link to github'
+          projectLink={<ClimbingCommunityLink />}
         />
         <ProjectCard
           image={
@@ -65,8 +62,7 @@ export const Projects: React.FC = () => {
             rank chess players, so my friends wins and losses against other players could be used to determine which of them was 
             truly the best. The app allows you to add players, record games and view a leaderboard of all players and their up-to-date 
             rankings. Languages and frameworks: Javascript, HTML, CSS, MongoDB, Express, Node '
-          projectLink='link to external project'
-          codeLink='link to github'
+          projectLink={<SideSpinLink />}
         />
       </div>
     </div>

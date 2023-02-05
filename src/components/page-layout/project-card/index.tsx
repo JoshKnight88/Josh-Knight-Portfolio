@@ -1,18 +1,19 @@
+import * as React from 'react';
+
 import { IconButton } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import * as React from 'react';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 import '../../../assets/page-layout/project-card.css';
+import { JsxElement } from 'typescript';
 
 interface IProjectCardProps {
   image?: React.ReactElement;
   title?: string;
   subtitle?: string;
   bodyText?: string;
-  projectLink?: string;
-  codeLink?: string;
+  projectLink?: React.ReactElement;
 }
 
 export const ProjectCard: React.FC<IProjectCardProps> = ({
@@ -20,7 +21,6 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
   title,
   bodyText,
   projectLink,
-  codeLink,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,7 +45,6 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
           <div className='card-open'>
             {bodyText}
             {projectLink}
-            {codeLink}
           </div>
         )}
       </div>

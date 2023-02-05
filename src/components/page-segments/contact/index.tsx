@@ -5,7 +5,6 @@ import { ContactForm } from '../../contact-form';
 import '../../../assets/page-segments/title.css';
 import '../../../assets/page-segments/contact.css';
 import '../../../assets/page-layout/segment-links.css';
-import { SocialsLinks } from '../../page-layout/socials-links';
 
 export const Contact: React.FC = () => {
   return (

@@ -1,3 +1,9 @@
+.projects-text, .project-card, .card-open {
+    font-family: 'Raleway', sans-serif;
+  
+}
+
+
 @media only screen and (min-width: 100px) and (max-width: 600px) {
   .projects-body {
     display: flex;

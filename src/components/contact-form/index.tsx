@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import { LoadingSpinner } from '../utils/loading-spinner';
 import { Modal } from '../utils/modal';
 import '../../assets/components/contact-form.css';
+import '../../assets/components/utils/modal/modal-open-body.css';
 
 const service_key = process.env.SERVICE_KEY;
 const template_id = process.env.TEMPLATE_ID;
@@ -44,6 +45,8 @@ export const ContactForm = () => {
     });
   };
 
+  const handleClose = () => setIsResultOpenModal(false);
+
   const onSubmit = (e: any) => {
     e.preventDefault();
 
@@ -70,13 +73,13 @@ export const ContactForm = () => {
     setMessageIsValid(true);
 
     setIsLoading(true);
-    console.log(formContent)
+    console.log(formContent);
     emailjs
       .sendForm(
-        `${service_key}`,
-        `${template_id}`,
+        'service_2hqrf7r',
+        'template_gbble6j',
         '#contact-form',
-        `${public_key}`
+        'QM_VuSiDgeF9nPkqo'
       )
       .then(
         (result) => {
@@ -96,9 +99,10 @@ export const ContactForm = () => {
   const emailInputIsInvalid = !emailIsValid && emailIsTouched;
   const messageInputIsInvalid = !messageIsValid && messageIsTouched;
 
-  const inputClasses = nameInputIsInvalid || emailInputIsInvalid || messageInputIsInvalid
-    ? 'form-body invalid'
-    : 'form-body';
+  const inputClasses =
+    nameInputIsInvalid || emailInputIsInvalid || messageInputIsInvalid
+      ? 'form-body invalid'
+      : 'form-body';
 
   return (
     <>
@@ -139,20 +143,22 @@ export const ContactForm = () => {
         )}
       </form>
       {isResultOpenModal && (
-        <Modal
-          title='Thanks for getting in touch!'
-          subtitle="I'll get back to you shortly."
-          onClick={() => setIsResultOpenModal(false)}
-        />
+        <div className='modal-open-body'>
+          <Modal
+            title='Thanks for getting in touch!'
+            subtitle="I'll get back to you shortly."
+            handleClose={handleClose}
+          />
+        </div>
       )}
-      {isErrorOpenModal && (
+      {/* {isErrorOpenModal && (
         <Modal
           title="Sorry, something's gone wrong."
           subtitle='error'
           // {`${error}`}
           onClick={() => setIsErrorOpenModal(false)}
         />
-      )}
+      )} */}
     </>
   );
 };
