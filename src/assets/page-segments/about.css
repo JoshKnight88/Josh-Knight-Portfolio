@@ -72,8 +72,7 @@
     max-width: 100%;
     grid-area: text;
     column-width: 50%;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: scroll;
   }
   ::-webkit-scrollbar {
     width: 5px;
