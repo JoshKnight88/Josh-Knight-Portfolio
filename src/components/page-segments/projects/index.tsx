@@ -24,8 +24,7 @@ export const Projects: React.FC = () => {
         </div>
         <div className='projects-text'>
           <p>
-            Below are the projects I'm involved with. Feel free to to check them
-            out!
+            Below are the projects I'm involved in. Please take a look and get in touch if you have any questions.
           </p>
         </div>
       </div>

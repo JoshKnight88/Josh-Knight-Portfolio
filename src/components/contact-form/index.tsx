@@ -107,40 +107,45 @@ export const ContactForm = () => {
   return (
     <>
       <form className={inputClasses} id='contact-form' onSubmit={onSubmit}>
-        <input
-          placeholder='Name'
-          name='name'
-          value={formContent.name}
-          onChange={(e) => updateForm({ name: e.target.value })}
-        />
-        {nameInputIsInvalid && (
-          <p className='error-text'>Please enter your name</p>
-        )}
-        <input
-          placeholder='Email'
-          name='email'
-          value={formContent.email}
-          onChange={(e) => updateForm({ email: e.target.value })}
-        />
-        {emailInputIsInvalid && (
-          <p className='error-text'>Please provide a valid email</p>
-        )}
+        <div className='inputs'>
+          <input
+            placeholder='Name'
+            name='name'
+            value={formContent.name}
+            onChange={(e) => updateForm({ name: e.target.value })}
+          />
+          {nameInputIsInvalid && (
+            <p className='error-text'>Please enter your name</p>
+          )}
+          <input
+            placeholder='Email'
+            name='email'
+            value={formContent.email}
+            onChange={(e) => updateForm({ email: e.target.value })}
+          />
+          {emailInputIsInvalid && (
+            <p className='error-text'>Please provide a valid email</p>
+          )}
+        </div>
+        <div className='message-and-btn'>
+          <textarea
+            placeholder='Message'
+            name='message'
+            value={formContent.message}
+            onChange={(e) => updateForm({ message: e.target.value })}
+          />
+          {messageInputIsInvalid && (
+            <p className='error-text'>Please include a message</p>
+          )}
 
-        <textarea
-          placeholder='Message'
-          name='message'
-          value={formContent.message}
-          onChange={(e) => updateForm({ message: e.target.value })}
-        />
-        {messageInputIsInvalid && (
-          <p className='error-text'>Please include a message</p>
-        )}
-
-        {!isLoading ? (
-          <input className='btn-submit' type='submit' />
-        ) : (
-          <LoadingSpinner />
-        )}
+          {!isLoading ? (
+            <button className='btn-submit' type='submit' placeholder='Send'>
+              Send
+            </button>
+          ) : (
+            <LoadingSpinner />
+          )}
+        </div>
       </form>
       {isResultOpenModal && (
         <div className='modal-open-body'>

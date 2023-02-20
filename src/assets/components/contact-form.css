@@ -3,24 +3,35 @@
   flex-direction: column;
   align-content: flex-start;
   font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
+
+.inputs {
+  display: flex;
+}
+
+.message-and-btn {
+  display: flex;
+  flex-direction: column;
+}
+ textarea {
+    height: 200px;
+  }
 
 input,
 textarea {
-  font-family: 'Raleway', sans-serif;
   padding: 10px;
   margin: 10px;
   border-radius: 3px;
   box-shadow: none;
 }
 
-textarea {
+/* textarea {
   width: 350px;
   height: 150px;
-}
+} */
 
 .btn-submit {
-  font-family: 'Raleway', sans-serif;
   font-weight: bold;
   max-width: 150px;
   border-radius: 10px;
@@ -61,4 +72,24 @@ textarea {
 
 .error-text {
   color: #b40e0e;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 600px) {
+
+  .inputs {
+    flex-direction: column;
+  }
+  .message-and-btn {
+    flex-direction: column;
+  }
+  textarea {
+    height: 150px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+ .message-and-btn {
+    flex-direction: column;
+  }
+
 }
